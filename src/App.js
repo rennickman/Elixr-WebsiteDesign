@@ -5,7 +5,8 @@ import Navbar from "./Components/Navbar";
 import GlobalStyle from './GlobalStyles';
 import { SliderData } from './data/SliderData';
 import Dropdown from "./Components/Dropdown";
-
+import InfoSection from "./Components/InfoSection";
+import { InfoData } from './data/InfoData';
 
 function App() {
 
@@ -17,12 +18,13 @@ function App() {
 
 
     return (
-        <>
-            <GlobalStyle />
-            <Navbar toggle={toggle} />
-            <Dropdown isOpen={isOpen} toggle={toggle} />
-            <Hero slides={SliderData}/>
-        </>
+      <>
+        <GlobalStyle />
+        <Navbar toggle={toggle} />
+        <Dropdown isOpen={isOpen} toggle={toggle} />
+        <Hero slides={SliderData} />
+        <InfoSection {...InfoData} />
+      </>
     );
 };
 
